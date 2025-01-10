@@ -91,19 +91,19 @@ export const Skeleton1 = () => {
     <div className="p-8 overflow-hidden h-full relative flex items-center justify-center">
       <div className="flex flex-row flex-shrink-0 justify-center items-center gap-2">
         <Container className="h-16 w-16 circle-1">
-          <ClaudeLogo className="h-12 w-12 text-blue-500 " />
+          <ClaudeLogo className="h-12 w-12 text-white " />
         </Container>
         <Container className="h-16 w-16 circle-2 ">
-          <SiOpenai className="h-12 w-12 text-white-500" />
+          <SiOpenai className="h-12 w-12 text-white" />
         </Container>
         <Container className="h-16 w-16 circle-3">
-          <OpenAILogo className="h-12 w-12 text-red-500" />
+          <OpenAILogo className="h-12 w-12 text-white" />
         </Container>
         <Container className="h-16 w-16 circle-4">
-          <MetaIconOutline className="h-12 w-12 text-yellow-500" />
+          <MetaIconOutline className="h-12 w-12 text-white" />
         </Container>
         <Container className="h-16 w-16 circle-5">
-          <GeminiLogo className="h-12 w-12 text-purple-500" />
+          <GeminiLogo className="h-12 w-12 text-white" />
         </Container>
       </div>
 
@@ -261,19 +261,19 @@ const Container = ({
 
 // Logo Components (Updated with Colorful & Bigger Sizes)
 export const ClaudeLogo = ({  }: { className?: string }) => {
-  return <SiBlender className="h-12 w-12 text-gray-400" />; // Bigger size and blue color
+  return <SiBlender className="h-12 w-12 text-white" />; // Bigger size and blue color
 };
 
 export const OpenAILogo = ({ }: { className?: string }) => {
-  return <SiAdobeaftereffects  className="h-12 w-12 text-gray-499" />; // Bigger size and red color
+  return <SiAdobeaftereffects  className="h-12 w-12 text-white" />; // Bigger size and red color
 };
 
 export const GeminiLogo = ({  }: { className?: string }) => {
-  return <SiAdobepremierepro className="h-12 w-12 text-gray-400" />; // Bigger size and purple color
+  return <SiAdobepremierepro className="h-12 w-12 text-white" />; // Bigger size and purple color
 };
 
 export const MetaIconOutline = ({  }: { className?: string }) => {
-  return <SiAdobephotoshop className="h-12 w-12 text-gray-400 " />; // Bigger size and yellow color
+  return <SiAdobephotoshop className="h-12 w-12 text-white " />; // Bigger size and yellow color
 };
 
 
