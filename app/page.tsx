@@ -68,9 +68,7 @@ export default function Home() {
           {/* Video Editor Section */}
           <section className="bg-transparent text-center py-16">
             <div className="max-w-4xl mx-auto p-8 rounded-lg shadow-lg">
-              <h3 className="text-2xl font-bold text-white mb-4">
-                Become a Pro Video Editor!
-              </h3>
+
               <p className="text-xl text-white mb-6">
                 Join our cohort and master video editing with expert guidance.
               </p>

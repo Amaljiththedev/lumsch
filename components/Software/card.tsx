@@ -2,8 +2,7 @@
 import { animate, motion } from "framer-motion";
 import React, { useEffect } from "react";
 import { cn } from "@/lib/utils";
-import { IconBrandAdobeAfterEffect, IconBrandAdobePhotoshop, IconBrandAdobePremier, IconBrandBlender, IconBrandNotion } from "@tabler/icons-react";
-
+import { SiAdobeaftereffects, SiAdobephotoshop, SiAdobepremierepro, SiBlender,SiOpenai } from "react-icons/si";
 // CardDemo Component
 export function CardDemo() {
   return (
@@ -82,7 +81,8 @@ export const Skeleton1 = () => {
           <ClaudeLogo className="h-12 w-12 text-blue-500" /> {/* Increased size and color */}
         </Container>
         <Container className="h-16 w-16 circle-2">
-          <IconBrandNotion className="h-12 w-12 text-white-500" /> {/* Increased size and color */}
+          <SiOpenai 
+          className="h-12 w-12 text-white-500" /> {/* Increased size and color */}
         </Container>
         <Container className="h-16 w-16 circle-3">
           <OpenAILogo className="h-12 w-12 text-red-500" /> {/* Increased size and color */}
@@ -249,17 +249,17 @@ const Container = ({
 
 // Logo Components (Updated with Colorful & Bigger Sizes)
 export const ClaudeLogo = ({  }: { className?: string }) => {
-  return <IconBrandBlender className="h-12 w-12 text-orange-500" />; // Bigger size and blue color
+  return <SiBlender className="h-12 w-12 text-orange-500" />; // Bigger size and blue color
 };
 
 export const OpenAILogo = ({ }: { className?: string }) => {
-  return <IconBrandAdobePremier className="h-12 w-12 text-blue-700" />; // Bigger size and red color
+  return <SiAdobeaftereffects  className="h-12 w-12 text-blue-700" />; // Bigger size and red color
 };
 
 export const GeminiLogo = ({  }: { className?: string }) => {
-  return <IconBrandAdobeAfterEffect className="h-12 w-12 text-purple-500" />; // Bigger size and purple color
+  return <SiAdobepremierepro className="h-12 w-12 text-purple-500" />; // Bigger size and purple color
 };
 
 export const MetaIconOutline = ({  }: { className?: string }) => {
-  return <IconBrandAdobePhotoshop className="h-12 w-12 text-blue-200" />; // Bigger size and yellow color
+  return <SiAdobephotoshop className="h-12 w-12 text-blue-200" />; // Bigger size and yellow color
 };
