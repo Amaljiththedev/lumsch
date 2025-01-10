@@ -15,7 +15,7 @@ const Hero = () => {
           Unlock Your Editing Potential
         </p>
 
-        <h1 className="text-6xl sm:text-7xl mb-6 font-semibold ">
+        <h1 className="text-6xl sm:text-7xl mb-6 font-medium ">
           Crafting Top-notch Video Editors
         </h1>
         
