@@ -31,6 +31,11 @@ export default function RootLayout({
           rel="stylesheet"
           precedence="default"
         />
+          <link
+    href="https://fonts.googleapis.com/css2?family=Nohemi&display=swap"
+    rel="stylesheet"
+  />
+
       </head>
     
       <body

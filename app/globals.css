@@ -49,3 +49,7 @@ body {
     --radius: 0.5rem;
   }
 }
+
+body {
+  font-family: 'Nohemi', sans-serif;
+}
