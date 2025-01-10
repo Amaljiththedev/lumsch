@@ -7,9 +7,6 @@ import { useInView } from "react-intersection-observer"; // Import the Intersect
 import { motion } from "framer-motion"; // Import framer-motion for animations
 import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 
-
-
-
 const items = [
   {
     title: "Mastering Advanced Tools",
@@ -19,42 +16,26 @@ const items = [
         <Skeleton1 />
       </CardSkeletonContainer>
     ),
-    className: "md:col-span-2",
-    icon: <IconTools className="h-6 w-6 text-neutral-500" />,
+    className: "md:col-span-3", // Make this item span 2 columns to make it bigger
+    icon: <IconTools className="h-12 w-12 text-neutral-500" />, // Increased icon size
   },
-  {
-    title: "The Digital Revolution",
-    description: "Dive into the transformative power of technology.",
-    header: (
-      <div className="flex justify-center items-center">
-        <DotLottieReact
-          src="https://lottie.host/0be36993-49b6-4148-8ce4-da12d9dbf815/I9fTTxFe8b.lottie"
-          loop
-          autoplay
-          className="w-64 h-64" // Adjust size as needed
-        />
-      </div>
-    ),
-    className: "col-span-1 flex flex-col items-center text-center space-y-4", // Center the content
-    icon: <IconFileBroken className="h-8 w-8 text-neutral-500" />, // Made icon bigger
-  },  
   {
     title: "Elevating Creativity",
     description: "Unleashing growth and redefining creativity through expert guidance in video editing.",
     header: <Chart />,
-    className: "md:col-span-1",
-    icon: <IconSignature className="h-6 w-6 text-neutral-500" />,
+    className: "md:col-span-2", // Ensure the other items take up 1 column
+    icon: <IconSignature className="h-10 w-10 text-neutral-500" />, // Increased icon size
   },
   {
     title: "Pioneering Freelancing and Agency Leadership",
     description: "Acquire the expertise and strategies necessary to excel as a professional freelancer or launch a thriving agency after mastering essential skills.",
     header:  <DotLottieReact
-    src="https://lottie.host/258b2181-4253-4664-be82-2ae9fad6e37c/YUd2s5H67o.lottie"
-    loop
-    autoplay
-  />,
-    className: "md:col-span-2",
-    icon: <IconBuildingCommunity className="h-6 w-6 text-neutral-500" />,
+      src="https://lottie.host/258b2181-4253-4664-be82-2ae9fad6e37c/YUd2s5H67o.lottie"
+      loop
+      autoplay
+    />,
+    className: "md:col-span-1", // Ensure the other items take up 1 column
+    icon: <IconBuildingCommunity className="h-10 w-10 text-neutral-500" />, // Increased icon size
   },
 ];
 
@@ -78,7 +59,7 @@ const RevealOnScroll = ({ children }: { children: React.ReactNode }) => {
 
 export function BentoGridSecondDemo() {
   return (
-    <BentoGrid className="max-w-4xl mx-auto">
+    <BentoGrid className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
       {items.map((item, i) => (
         <BentoGridItem
           key={i}

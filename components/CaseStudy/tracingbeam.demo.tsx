@@ -3,7 +3,6 @@ import React from "react";
 import { twMerge } from "tailwind-merge";
 import { TracingBeam } from "./tracing-beam";
 import { Component } from "./Graph";
-import { useInView } from "react-intersection-observer";
 import { motion } from "framer-motion";
 
 export function TracingBeamDemo() {
@@ -11,8 +10,8 @@ export function TracingBeamDemo() {
     <TracingBeam className="px-6">
       <div className="max-w-2xl mx-auto antialiased pt-4 relative">
         {dummyContent.map((item, index) => (
-          <div key={`content-${index}`} className="mb-10">
-            <h2 className="bg-transparenr text-white rounded-full text-sm w-fit px-4 py-1 mb-4">
+          <div key={`content-${index}`} className="mb-10 flex flex-col items-center text-center">
+            <h2 className="bg-transparent text-white rounded-full text-sm w-fit px-4 py-1 mb-4">
               {item.badge}
             </h2>
 
@@ -24,8 +23,10 @@ export function TracingBeamDemo() {
               whileInView={{ opacity: 1 }}
               transition={{ duration: 1, ease: "easeInOut" }}
             >
-              {item.component && <div className="rounded-lg mb-10">{item.component}</div>}
-              {item.description}
+              {item.component && (
+                <div className="rounded-lg mb-10 flex justify-center w-full">{item.component}</div>
+              )}
+              <div>{item.description}</div>
             </motion.div>
           </div>
         ))}
@@ -84,7 +85,7 @@ const dummyContent = [
           height="324"
           style={{ border: "none", pointerEvents: "none" }}
           frameBorder="0"
-          className="giphy-embed w-auto h-auto"
+          className="giphy-embed w-full h-auto"
           allowFullScreen
         ></iframe>
       </div>
@@ -110,6 +111,6 @@ const dummyContent = [
       </>
     ),
     badge: "Cohort-Based Learning",
-    component: <img src="./cohort.png" />,
+    component: <img src="./cohort.png" className="w-full h-auto" />,
   },
 ];

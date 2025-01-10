@@ -3,7 +3,8 @@ import { animate, motion } from "framer-motion";
 import React, { useEffect } from "react";
 import { cn } from "@/lib/utils";
 import { IconBrandAdobeAfterEffect, IconBrandAdobePhotoshop, IconBrandAdobePremier, IconBrandBlender, IconBrandNotion } from "@tabler/icons-react";
- 
+
+// CardDemo Component
 export function CardDemo() {
   return (
     <Card>
@@ -18,7 +19,8 @@ export function CardDemo() {
     </Card>
   );
 }
- 
+
+// Skeleton1 Component
 export const Skeleton1 = () => {
   const scale = [1, 1.1, 1];
   const transform = ["translateY(0px)", "translateY(-4px)", "translateY(0px)"];
@@ -64,7 +66,7 @@ export const Skeleton1 = () => {
       { duration: 0.8 },
     ],
   ];
- 
+
   useEffect(() => {
     animate(sequence, {
       // @ts-ignore
@@ -72,26 +74,27 @@ export const Skeleton1 = () => {
       repeatDelay: 1,
     });
   }, []);
+
   return (
     <div className="p-8 overflow-hidden h-full relative flex items-center justify-center">
       <div className="flex flex-row flex-shrink-0 justify-center items-center gap-2">
-        <Container className="h-8 w-8 circle-1">
-          <ClaudeLogo className="h-4 w-4 " />
+        <Container className="h-16 w-16 circle-1">
+          <ClaudeLogo className="h-12 w-12 text-blue-500" /> {/* Increased size and color */}
         </Container>
-        <Container className="h-12 w-12 circle-2">
-          <IconBrandNotion/>
+        <Container className="h-16 w-16 circle-2">
+          <IconBrandNotion className="h-12 w-12 text-white-500" /> {/* Increased size and color */}
         </Container>
-        <Container className="circle-3">
-          <OpenAILogo className="h-8 w-8 text-white" />
+        <Container className="h-16 w-16 circle-3">
+          <OpenAILogo className="h-12 w-12 text-red-500" /> {/* Increased size and color */}
         </Container>
-        <Container className="h-12 w-12 circle-4">
-          <MetaIconOutline className="h-6 w-6 " />
+        <Container className="h-16 w-16 circle-4">
+          <MetaIconOutline className="h-12 w-12 text-yellow-500" /> {/* Increased size and color */}
         </Container>
-        <Container className="h-8 w-8 circle-5">
-          <GeminiLogo className="h-4 w-4 " />
+        <Container className="h-16 w-16 circle-5">
+          <GeminiLogo className="h-12 w-12 text-purple-500" /> {/* Increased size and color */}
         </Container>
       </div>
- 
+
       <div className="h-40 w-px absolute top-20 m-auto z-40 bg-gradient-to-b from-transparent via-cyan-500 to-transparent animate-move">
         <div className="w-10 h-32 top-1/2 -translate-y-1/2 absolute -left-10">
           <Sparkles />
@@ -100,6 +103,8 @@ export const Skeleton1 = () => {
     </div>
   );
 };
+
+// Sparkles Component
 const Sparkles = () => {
   const randomMove = () => Math.random() * 2 - 1;
   const randomOpacity = () => Math.random();
@@ -135,7 +140,8 @@ const Sparkles = () => {
     </div>
   );
 };
- 
+
+// Card Component
 export const Card = ({
   className,
   children,
@@ -154,7 +160,8 @@ export const Card = ({
     </div>
   );
 };
- 
+
+// CardTitle Component
 export const CardTitle = ({
   children,
   className,
@@ -173,7 +180,8 @@ export const CardTitle = ({
     </h3>
   );
 };
- 
+
+// CardDescription Component
 export const CardDescription = ({
   children,
   className,
@@ -184,7 +192,7 @@ export const CardDescription = ({
   return (
     <p
       className={cn(
-        "text-sm font-normal text-neutral-400 max-w-sm",
+        "text-lg font-normal text-white max-w-sm",
         className
       )}
     >
@@ -192,7 +200,8 @@ export const CardDescription = ({
     </p>
   );
 };
- 
+
+// CardSkeletonContainer Component
 export const CardSkeletonContainer = ({
   className,
   children,
@@ -215,7 +224,8 @@ export const CardSkeletonContainer = ({
     </div>
   );
 };
- 
+
+// Container Component
 const Container = ({
   className,
   children,
@@ -236,25 +246,20 @@ const Container = ({
     </div>
   );
 };
- 
 
+// Logo Components (Updated with Colorful & Bigger Sizes)
 export const ClaudeLogo = ({  }: { className?: string }) => {
-    return <IconBrandBlender />;
-  };
- 
+  return <IconBrandBlender className="h-12 w-12 text-orange-500" />; // Bigger size and blue color
+};
+
 export const OpenAILogo = ({ }: { className?: string }) => {
-  return (
-    <IconBrandAdobePremier/>
-  );
+  return <IconBrandAdobePremier className="h-12 w-12 text-blue-700" />; // Bigger size and red color
 };
+
 export const GeminiLogo = ({  }: { className?: string }) => {
-  return (
-    <IconBrandAdobeAfterEffect/>
-  );
+  return <IconBrandAdobeAfterEffect className="h-12 w-12 text-purple-500" />; // Bigger size and purple color
 };
- 
+
 export const MetaIconOutline = ({  }: { className?: string }) => {
-  return (
-    <IconBrandAdobePhotoshop/>
-  );
+  return <IconBrandAdobePhotoshop className="h-12 w-12 text-blue-200" />; // Bigger size and yellow color
 };
