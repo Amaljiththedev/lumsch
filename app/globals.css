@@ -2,21 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #000000;
-  --foreground: #000000;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #000000;
-    --foreground: #000000;
-  }
-}
-
 body {
-  color: var(--foreground);
-  background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -44,4 +30,22 @@ body {
 }
 .animate-spotlight {
   will-change: opacity, transform;
+}
+
+:root {
+  --blur: 0px;
+  --spread: 20px;
+  --active: 0;
+}
+
+/* Other custom styles using the variables */
+.glowing-effect {
+  filter: blur(var(--blur)) spread(var(--spread));
+  opacity: var(--active);
+  transition: opacity 0.3s ease;
+}
+@layer base {
+  :root {
+    --radius: 0.5rem;
+  }
 }
