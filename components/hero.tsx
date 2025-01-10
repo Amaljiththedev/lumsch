@@ -15,9 +15,10 @@ const Hero = () => {
           Unlock Your Editing Potential
         </p>
 
-        <h1 className="text-4xl sm:text-6xl mb-6 font-bold font-[Nohemi]">
+        <h1 className="text-6xl sm:text-7xl mb-6 font-bold ">
           Crafting Top-notch Video Editors
         </h1>
+        
 
         <p className="text-lg sm:text-lg max-w-xl mx-auto">
           Join us to enhance your editing skills with expert guidance and hands-on projects.
