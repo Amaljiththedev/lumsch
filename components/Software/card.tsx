@@ -249,17 +249,17 @@ const Container = ({
 
 // Logo Components (Updated with Colorful & Bigger Sizes)
 export const ClaudeLogo = ({  }: { className?: string }) => {
-  return <SiBlender className="h-12 w-12 text-orange-500" />; // Bigger size and blue color
+  return <SiBlender className="h-12 w-12 text-gray-400" />; // Bigger size and blue color
 };
 
 export const OpenAILogo = ({ }: { className?: string }) => {
-  return <SiAdobeaftereffects  className="h-12 w-12 text-blue-700" />; // Bigger size and red color
+  return <SiAdobeaftereffects  className="h-12 w-12 text-gray-499" />; // Bigger size and red color
 };
 
 export const GeminiLogo = ({  }: { className?: string }) => {
-  return <SiAdobepremierepro className="h-12 w-12 text-purple-500" />; // Bigger size and purple color
+  return <SiAdobepremierepro className="h-12 w-12 text-gray-400" />; // Bigger size and purple color
 };
 
 export const MetaIconOutline = ({  }: { className?: string }) => {
-  return <SiAdobephotoshop className="h-12 w-12 text-blue-200" />; // Bigger size and yellow color
+  return <SiAdobephotoshop className="h-12 w-12 text-gray-400" />; // Bigger size and yellow color
 };

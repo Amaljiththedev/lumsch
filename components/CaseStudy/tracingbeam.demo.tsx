@@ -10,21 +10,21 @@ export function TracingBeamDemo() {
     <TracingBeam className="px-6">
       <div className="max-w-2xl mx-auto antialiased pt-4 relative">
         {dummyContent.map((item, index) => (
-          <div key={`content-${index}`} className="mb-10 flex flex-col items-center text-center">
-            <h2 className="bg-transparent text-white rounded-full text-sm w-fit px-4 py-1 mb-4">
+          <div key={`content-${index}`} className="mb-10">
+            <h2 className="bg-transparent text-white rounded-full text-sm w-fit px-4 py-1 mb-4 text-center">
               {item.badge}
             </h2>
 
-            <p className={twMerge("text-xl mb-4")}>{item.title}</p>
+            <p className={twMerge("text-xl mb-4 text-center")}>{item.title}</p>
 
             <motion.div
-              className="text-sm prose prose-sm prose-invert"
+              className="text-sm prose prose-sm prose-invert text-center"
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               transition={{ duration: 1, ease: "easeInOut" }}
             >
               {item.component && (
-                <div className="rounded-lg mb-10 flex justify-center w-full">{item.component}</div>
+                <div className="rounded-lg mb-10 flex justify-center">{item.component}</div>
               )}
               <div>{item.description}</div>
             </motion.div>
