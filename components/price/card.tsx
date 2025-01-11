@@ -52,16 +52,11 @@ const Card: React.FC<CardProps> = ({ }) => {
 
           {/* Enhanced Price Section */}
           <h1 className="text-5xl md:text-6xl text-blue-50 font-extrabold leading-tight">
-            ₹ 54,990
+            ₹ 25000
             <span className="text-xl text-blue-100 font-normal ml-2">(Inc. GST)</span>
           </h1>
 
-          {/* Placement Fee */}
-          <p className="text-lg md:text-xl text-blue-100 font-normal mt-2">
-            <span className="[&_b]:md:font-semibold [&_strong]:md:font-semibold font-mono text-sm/[1.125rem] md:text-base/[1.375rem] ml-1 font-normal tracking-0 md:ml-2">
-              + ₹ 25,000 Placement Fee*
-            </span>
-          </p>
+
 
           {/* Divider Line */}
           <hr className="border-brand-neutrals-100 dark:border-brand-neutrals-800 my-4" />

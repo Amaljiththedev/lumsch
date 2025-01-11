@@ -61,7 +61,7 @@ export const Skeleton1 = () => {
         scale,
         transform,
       },
-      { duration: 0.8 },
+      { duration: 0.9 },
     ],
     [
       ".circle-5",
@@ -69,7 +69,7 @@ export const Skeleton1 = () => {
         scale,
         transform,
       },
-      { duration: 0.8 },
+      { duration: 0.10 },
     ],
   ];
 

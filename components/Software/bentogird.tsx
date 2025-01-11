@@ -1,11 +1,10 @@
 import React from "react";
-import { IconBuildingCommunity, IconFileBroken, IconSignature, IconTools } from "@tabler/icons-react";
+import { IconBuildingCommunity, IconSignature, IconTools } from "@tabler/icons-react";
 import { CardSkeletonContainer, Skeleton1 } from "./card";
 import { Chart } from "./GrowthGraph";
 import { BentoGrid, BentoGridItem } from "./bento-grid";
-import { useInView } from "react-intersection-observer"; // Import the Intersection Observer hook
-import { motion } from "framer-motion"; // Import framer-motion for animations
 import { DotLottieReact } from '@lottiefiles/dotlottie-react';
+import RevealOnScroll from './RevealOnScroll'; // Import the RevealOnScroll component
 
 const items = [
   {
@@ -16,15 +15,15 @@ const items = [
         <Skeleton1 />
       </CardSkeletonContainer>
     ),
-    className: "md:col-span-3", // Make this item span 2 columns to make it bigger
-    icon: <IconTools className="h-12 w-12 text-neutral-500" />, // Increased icon size
+    className: "md:col-span-3",
+    icon: <IconTools className="h-12 w-12 text-white" />,
   },
   {
     title: "Elevating Creativity",
     description: "Unleashing growth and redefining creativity through expert guidance in video editing.",
     header: <Chart />,
-    className: "md:col-span-2", // Ensure the other items take up 1 column
-    icon: <IconSignature className="h-10 w-10 text-neutral-500" />, // Increased icon size
+    className: "md:col-span-3",
+    icon: <IconSignature className="h-10 w-10 text-white" />,
   },
   {
     title: "Pioneering Freelancing and Agency Leadership",
@@ -34,28 +33,10 @@ const items = [
       loop
       autoplay
     />,
-    className: "md:col-span-1", // Ensure the other items take up 1 column
-    icon: <IconBuildingCommunity className="h-10 w-10 text-neutral-500" />, // Increased icon size
+    className: "md:col-span-3",
+    icon: <IconBuildingCommunity className="h-10 w-10 text-white" />,
   },
 ];
-
-const RevealOnScroll = ({ children }: { children: React.ReactNode }) => {
-  const { ref, inView } = useInView({
-    triggerOnce: true, // Trigger animation only once
-    threshold: 0.2, // Trigger when 20% of the element is in view
-  });
-
-  return (
-    <motion.div
-      ref={ref}
-      initial={{ opacity: 0, y: 50 }} // Initial position (invisible and 50px lower)
-      animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : 50 }} // Animate opacity and Y position
-      transition={{ duration: 0.5 }} // Transition duration
-    >
-      {children}
-    </motion.div>
-  );
-};
 
 export function BentoGridSecondDemo() {
   return (
@@ -63,9 +44,9 @@ export function BentoGridSecondDemo() {
       {items.map((item, i) => (
         <BentoGridItem
           key={i}
-          title={<RevealOnScroll>{item.title}</RevealOnScroll>} // Wrap text with RevealOnScroll
-          description={<RevealOnScroll>{item.description}</RevealOnScroll>} // Wrap description with RevealOnScroll
-          header={<RevealOnScroll>{item.header}</RevealOnScroll>} // Wrap header with RevealOnScroll
+          title={<RevealOnScroll>{item.title}</RevealOnScroll>}
+          description={<RevealOnScroll>{item.description}</RevealOnScroll>}
+          header={<RevealOnScroll>{item.header}</RevealOnScroll>}
           className={`p-4 flex flex-col justify-between ${item.className}`}
           icon={item.icon}
         />
