@@ -1,4 +1,5 @@
 import { cn } from "@/lib/utils";
+import { AuroraBackground } from "../hero/Aurora";
 
 export const BentoGrid = ({ className, children }: { className?: string; children?: React.ReactNode }) => {
   return (
@@ -12,6 +13,7 @@ export const BentoGrid = ({ className, children }: { className?: string; childre
     </div>
   );
 };
+
 
 export const BentoGridItem = ({
   className,

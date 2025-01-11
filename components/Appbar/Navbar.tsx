@@ -34,7 +34,7 @@ const Navbar = () => {
                 { label: "Home", href: "/" },
                 { label: "About Us", href: "/about" },
                 { label: "Structure", href: "/structure" },
-                { label: "Agency", href: "/youtube-channel" },
+                { label: "Agency", href: "https://luminarylines.com/" },
                 { label: "Hire from Us", href: "/hire-from-us" },
                 { label: "Contact Us", href: "/contact" },
               ].map((item, index) => (
@@ -106,7 +106,7 @@ const Navbar = () => {
                   { label: "Home", href: "/" },
                   { label: "About Us", href: "/about" },
                   { label: "Structure", href: "/structure" },
-                  { label: "Agency", href: "/youtube-channel" },
+                  { label: "Agency", href: "https://luminarylines.com/" },
                   { label: "Hire from Us", href: "/hire-from-us" },
                   { label: "Contact Us", href: "/contact" },
                 ].map((item, index) => (
