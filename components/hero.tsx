@@ -3,7 +3,7 @@ import { AuroraBackground } from './hero/Aurora';
 
 const Hero = () => {
   return (
-    <div className="relative h-screen flex flex-col justify-center mb-52 items-center bg-transparent overflow-hidden">
+    <div className="relative h-screen flex flex-col justify-center -mt-14 mb-52 items-center bg-transparent overflow-hidden">
       {/* Aurora Background */}
       <div className="absolute top-0 left-0 w-full h-full">
         <AuroraBackground />

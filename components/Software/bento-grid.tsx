@@ -39,7 +39,7 @@ export const BentoGridItem = ({
       <div className="flex flex-col items-start w-full">
         {icon}
 
-        <div className="font-sans font-bold text-white text-sm md:text-base lg:text-lg mt-4">{title}</div>
+        <div className="font-sans font-medium text-white text-sm md:text-base lg:text-lg mt-4">{title}</div>
         <div className="font-sans font-normal text-white text-xs md:text-sm lg:text-base mt-2">{description}</div>
       </div>
     </div>

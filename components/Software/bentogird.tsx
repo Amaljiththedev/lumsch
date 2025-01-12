@@ -27,7 +27,7 @@ const items = [
   },
   {
     title: "Pioneering Freelancing and Agency Leadership",
-    description: "Acquire the expertise and strategies necessary to excel as a professional freelancer or launch a thriving agency after mastering essential skills.",
+    description: "Master essential skills to excel as a freelancer or grow a successful agency.",
     header:  <DotLottieReact
       src="https://lottie.host/258b2181-4253-4664-be82-2ae9fad6e37c/YUd2s5H67o.lottie"
       loop

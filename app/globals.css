@@ -89,7 +89,7 @@ body {
 .embla {
   max-width: 100%;
   margin: auto;
-  --slide-height: 19rem;
+  --slide-height: 56.25vw; /* 9:16 aspect ratio based on viewport width */
   --slide-spacing: 1rem;
   --slide-size: 100%; /* Start with full width on small screens */
 }
@@ -97,23 +97,27 @@ body {
 @media (min-width: 640px) {
   .embla {
     --slide-size: 50%; /* 50% for screens 640px and larger */
+    --slide-height: 56.25vw; /* Maintain 9:16 aspect ratio */
   }
 }
 
 @media (min-width: 768px) {
   .embla {
     --slide-size: 33.33%; /* 33.33% for screens 768px and larger */
+    --slide-height: 56.25vw; /* Maintain 9:16 aspect ratio */
   }
 }
 
 @media (min-width: 1024px) {
   .embla {
     --slide-size: 25%; /* 25% for larger screens */
+    --slide-height: 56.25vw; /* Maintain 9:16 aspect ratio */
   }
 }
 
 .embla__viewport {
   overflow: hidden;
+  position: relative; /* Ensure buttons align correctly */
 }
 
 .embla__container {
@@ -127,6 +131,7 @@ body {
   flex: 0 0 var(--slide-size);
   min-width: 0;
   padding-left: var(--slide-spacing);
+  position: relative; /* Ensures that the content aligns correctly */
 }
 
 .embla__slide__number {
@@ -147,6 +152,10 @@ body {
   justify-content: space-between;
   gap: 1.2rem;
   margin-top: 1.8rem;
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  transform: translateY(-50%);
 }
 
 .embla__buttons {
@@ -154,6 +163,7 @@ body {
   grid-template-columns: repeat(2, 1fr);
   gap: 0.6rem;
   align-items: center;
+  justify-content: center;
 }
 
 .embla__button {
@@ -193,4 +203,22 @@ body {
   align-self: center;
   color: var(--text-low-contrast);
   font-weight: 600;
+}
+
+@keyframes pathAnimation {
+  0% {
+    stroke-dashoffset: 1000; /* Start with a long dashoffset (hidden path) */
+  }
+  100% {
+    stroke-dashoffset: 0; /* End with the path fully drawn */
+  }
+}
+
+.path-animation {
+  stroke: #1E90FF;
+  stroke-width: 2;
+  fill: transparent;
+  stroke-dasharray: 1000; /* Length of the path */
+  stroke-dashoffset: 1000; /* Initially hidden */
+  animation: pathAnimation 2s ease-out forwards; /* Animate with a duration */
 }

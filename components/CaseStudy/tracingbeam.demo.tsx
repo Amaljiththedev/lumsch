@@ -1,19 +1,31 @@
 "use client";
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import { twMerge } from "tailwind-merge";
 import { TracingBeam } from "./tracing-beam";
 import { Component } from "./Graph";
 import { motion } from "framer-motion";
+import { IconVolume2, IconVolumeOff } from "@tabler/icons-react";
+
 
 
 
 const VideoComponent = () => {
   const [isMuted, setIsMuted] = useState(true);
+  const videoRef = useRef<HTMLVideoElement | null>(null);
+
+  const handleMuteToggle = () => {
+    if (videoRef.current) {
+      videoRef.current.currentTime = 0; // Reset video playback to start
+      videoRef.current.muted = !isMuted; // Toggle mute
+    }
+    setIsMuted((prev) => !prev);
+  };
 
   return (
     <div className="relative flex justify-center items-center w-full h-auto">
       <div className="relative w-full max-w-md">
         <video
+          ref={videoRef}
           src="/video.mp4"
           autoPlay
           loop
@@ -21,16 +33,20 @@ const VideoComponent = () => {
           className="w-full h-[600px] rounded-xl shadow-xl object-cover"
         ></video>
         <button
-          onClick={() => setIsMuted((prev) => !prev)}
-          className="absolute bottom-6 right-6 bg-black bg-opacity-50 text-white p-3 rounded-full"
+          onClick={handleMuteToggle}
+          className="absolute bottom-6 right-6 bg-black bg-opacity-70 hover:bg-opacity-90 text-white p-3 rounded-full transition-colors duration-200 flex justify-center items-center"
+          aria-label={isMuted ? "Unmute" : "Mute"}
         >
-          {isMuted ? "🔇" : "🔊"}
+          {isMuted ? (
+            <IconVolumeOff className="h-6 w-6" />
+          ) : (
+            <IconVolume2 className="h-6 w-6" />
+          )}
         </button>
       </div>
     </div>
   );
 };
-
 export function TracingBeamDemo() {
   
   return (
