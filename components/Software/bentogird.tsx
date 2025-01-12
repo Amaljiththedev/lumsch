@@ -16,7 +16,7 @@ const items = [
       </CardSkeletonContainer>
     ),
     className: "md:col-span-3",
-    icon: <IconTools className="h-12 w-12 text-white" />,
+    icon: <IconTools className="h-10 w-10 text-white" />,
   },
   {
     title: "Elevating Creativity",

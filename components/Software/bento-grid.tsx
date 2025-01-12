@@ -1,11 +1,10 @@
 import { cn } from "@/lib/utils";
-import { AuroraBackground } from "../hero/Aurora";
 
 export const BentoGrid = ({ className, children }: { className?: string; children?: React.ReactNode }) => {
   return (
     <div
       className={cn(
-        "grid grid-cols-1 md:grid-cols-3 gap-6 max-w-7xl mx-auto px-4 md:px-0",
+        "grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-7xl mx-auto px-4 md:px-0", // Adjusting grid to be more responsive
         className
       )}
     >
@@ -13,7 +12,6 @@ export const BentoGrid = ({ className, children }: { className?: string; childre
     </div>
   );
 };
-
 
 export const BentoGridItem = ({
   className,
@@ -36,11 +34,11 @@ export const BentoGridItem = ({
       )}
     >
       {header}
-      <div className="flex flex-col items-start w-full">
+      <div className="flex  items-start w-full">
         {icon}
 
-        <div className="font-sans font-medium text-white text-sm md:text-base lg:text-lg mt-4">{title}</div>
-        <div className="font-sans font-normal text-white text-xs md:text-sm lg:text-base mt-2">{description}</div>
+        <div className="font-medium text-white text-sm sm:text-base md:text-lg lg:text-xl mt-4">{title}</div> {/* Added responsive font sizes */}
+        <div className="font-normal text-white text-xs sm:text-sm md:text-base lg:text-lg mt-2">{description}</div> {/* Responsive description */}
       </div>
     </div>
   );

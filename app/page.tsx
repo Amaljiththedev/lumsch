@@ -44,9 +44,9 @@ export default function Home() {
             <Hero />
           </header>
 
-          <section className="flex-grow -mt-96 md:-mt-96 z-10 flex items-center justify-center w-full px-4 sm:px-6 md:px-10">
+          {/* <section className="flex-grow -mt-96 md:-mt-96 z-10 flex items-center justify-center w-full px-4 sm:px-6 md:px-10">
             <TimelineDemo />
-          </section> 
+          </section>  */}
 
           {/* Learning Tools Section */}
           <section className="flex-grow mt-40 flex flex-col items-center justify-center w-full px-4 sm:px-6 md:px-10 text-center">
