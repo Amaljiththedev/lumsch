@@ -114,9 +114,9 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
                 onTouchStart={(e) => e.preventDefault()} // Prevent default touch behavior
                 onClick={(e) => e.preventDefault()} // Prevent default click behavior
                 >
-  <source src={slide.videoSrc} type="video/mp4" />
-  Your browser does not support the video tag.
-</video>
+                  <source src={slide.videoSrc} type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
 
                 {/* Video Thumbnail Overlay */}
                 {showThumbnail[index] && (

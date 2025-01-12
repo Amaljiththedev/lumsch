@@ -31,6 +31,10 @@ const VideoComponent = () => {
           autoPlay
           loop
           muted={isMuted}
+          playsInline 
+          webkit-playsinline="true" 
+          onTouchStart={(e) => e.preventDefault()}
+          onClick={(e) => e.preventDefault()} 
           className="w-full h-[600px] rounded-xl shadow-xl object-cover"
         ></video>
         <button
