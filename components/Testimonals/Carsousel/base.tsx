@@ -5,7 +5,7 @@ import Accumulation from './Carsousel'; // Adjust the import path based on your 
 
 const StudentTestimonials: React.FC = () => {
   return (
-    <section className="flex flex-col items-center justify-center text-center py-16 mt-20 sm:mt-24 md:mt-28 rounded-lg shadow-lg">
+    <section className="flex-grow mt-40 flex flex-col items-center justify-center w-full px-4 sm:px-6 md:px-10 text-cente  text-center py-16  sm:mt-24 md:mt-28 rounded-lg shadow-lg">
       {/* Title */}
       <h2 className="text-3xl sm:text-4xl md:text-5xl font-light text-white mb-6">
         HERE'S WHAT OUR STUDENTS HAVE TO SAY

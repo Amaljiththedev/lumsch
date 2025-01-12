@@ -60,15 +60,15 @@ export default function Home() {
             <BentoGridSecondDemo />
           </section>
 
-          <section className="flex flex-col items-center justify-center text-center py-16 -mt-32 sm:mt-24 md:mt-28">
+          <section className="flex flex-col items-center justify-center text-center py-16 -mt-40 sm:mt-24 md:mt-28">
             <StudentTestimonials />
           </section>
-          <section>
+          <section className="-mt-40">
           <TestimonialSection/>
           </section>
 
           {/* Case Study Section */}
-          <section className="flex-grow mt-40 flex flex-col items-center justify-center w-full px-4 sm:px-6 md:px-10 bg-transparent text-center">
+          <section className="flex-grow mt-10 flex flex-col items-center justify-center w-full px-4 sm:px-6 md:px-10 bg-transparent text-center">
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-light text-white mb-6">
               Case Study: Know Where the Demand Is
             </h2>

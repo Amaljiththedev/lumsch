@@ -101,6 +101,17 @@ export function Component() {
               2025 - 2030
             </div>
           </div>
+          {/* Added the color legend for clarity */}
+          <div className="flex gap-4 text-sm">
+            <div className="flex items-center gap-1">
+              <span className="w-4 h-4 bg-red-500 rounded-full"></span>
+              <span>Demand</span>
+            </div>
+            <div className="flex items-center gap-1">
+              <span className="w-4 h-4 bg-blue-500 rounded-full"></span>
+              <span>Shortage</span>
+            </div>
+          </div>
         </div>
       </CardFooter>
     </Card>

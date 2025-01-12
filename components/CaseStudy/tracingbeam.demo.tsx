@@ -62,7 +62,7 @@ export function TracingBeamDemo() {
             key={`content-${index}`}
             className="mb-10 flex flex-col items-center text-center"
           >
-            <h2 className="bg-transparent text-white rounded-full text-sm w-fit px-4 py-1 mb-4">
+            <h2 className="bg-transparent font-bold underline text-white rounded-full text-sm w-fit px-4 py-1 mb-4">
               {item.badge}
             </h2>
 
@@ -79,7 +79,7 @@ export function TracingBeamDemo() {
                   {item.component}
                 </div>
               )}
-              <div>{item.description}</div>
+              <div className="text-left">{item.description}</div>
             </motion.div>
           </div>
         ))}
