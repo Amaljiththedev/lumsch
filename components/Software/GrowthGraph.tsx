@@ -1,6 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import RevealOnScroll from './RevealOnScroll'
 
 export const Chart = () => (
   <div
@@ -13,7 +14,7 @@ export const Chart = () => (
       <div className={'font-bold text-3xl'}>+300%</div>
     </div>
     <div className={'bg-neutral-950  bg-grid-neutral-700 '}>
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 653 465">
+      <RevealOnScroll><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 653 465">
         <motion.path
           transition={{ delay: 0.3 }}
           initial={{ opacity: 0 }}
@@ -30,7 +31,7 @@ export const Chart = () => (
           className={'stroke-sky-400 '}
           strokeWidth="4"
         />
-      </svg>
+      </svg></RevealOnScroll>
     </div>
   </div>
 )

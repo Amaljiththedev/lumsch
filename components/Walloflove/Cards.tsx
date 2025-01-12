@@ -5,6 +5,7 @@ import { cva, type VariantProps } from "class-variance-authority";
 import { motion } from "framer-motion"; // Import framer motion
 import { useInView } from 'react-intersection-observer'; // Import intersection observer
 import { cn } from "@/lib/utils";
+import RevealOnScroll from "../Software/RevealOnScroll";
 
 const testimonialGridVariants = cva("max-w-4xl md:max-w-6xl px-2", {
   variants: {
@@ -78,12 +79,12 @@ export const TestimonialCard: React.FC<TestimonialCardProps> = ({
               },
             }}
           >
-            <p className="text-lg text-blue-200 italic mb-4">
+            <RevealOnScroll><p className="text-lg text-blue-200 italic mb-4">
               &ldquo;{testimonial.quote}&rdquo;
-            </p>
-            <h3 className="text-base font-semibold text-gray-600">
+            </p></RevealOnScroll>
+            <RevealOnScroll><h3 className="text-base font-semibold text-gray-600">
               - {testimonial.name}
-            </h3>
+            </h3></RevealOnScroll>
           </motion.div>
         );
       })}

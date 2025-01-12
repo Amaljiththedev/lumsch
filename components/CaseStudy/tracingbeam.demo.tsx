@@ -6,6 +6,7 @@ import { Component } from "./Graph";
 import { motion } from "framer-motion";
 import { IconVolume2, IconVolumeOff } from "@tabler/icons-react";
 import Image from "next/image";
+import RevealOnScroll from "../Software/RevealOnScroll";
 
 
 
@@ -57,8 +58,8 @@ export function TracingBeamDemo() {
   return (
     <TracingBeam className="px-6">
       <div className="max-w-2xl mx-auto antialiased pt-4 relative">
-        {dummyContent.map((item, index) => (
-          <div
+     {dummyContent.map((item, index) => (
+          <RevealOnScroll><div
             key={`content-${index}`}
             className="mb-10 flex flex-col items-center text-center"
           >
@@ -81,8 +82,9 @@ export function TracingBeamDemo() {
               )}
               <div className="text-left">{item.description}</div>
             </motion.div>
-          </div>
+          </div></RevealOnScroll>
         ))}
+      
       </div>
     </TracingBeam>
   );

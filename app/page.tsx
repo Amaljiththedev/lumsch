@@ -8,6 +8,7 @@ import Hero from "@/components/hero";
 import Card from "@/components/price/card";
 import { TimelineDemo } from "@/components/Roadmap.tsx/Timelinedemo";
 import { BentoGridSecondDemo } from "@/components/Software/bentogird";
+import RevealOnScroll from "@/components/Software/RevealOnScroll";
 import StudentTestimonials from "@/components/Testimonals/Carsousel/base";
 import TestimonialSection from "@/components/Walloflove/Testimonials";
 
@@ -44,19 +45,20 @@ export default function Home() {
             <Hero />
           </header>
 
-          {/* <section className="flex-grow -mt-96 md:-mt-96 z-10 flex items-center justify-center w-full px-4 sm:px-6 md:px-10">
+          <section className="flex-grow -mt-96 md:-mt-96 z-10 flex items-center justify-center w-full px-4 sm:px-6 md:px-10">
             <TimelineDemo />
-          </section>  */}
+          </section> 
 
           {/* Learning Tools Section */}
           <section className="flex-grow mt-40 flex flex-col items-center justify-center w-full px-4 sm:px-6 md:px-10 text-center">
+            <RevealOnScroll>
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-light text-white mb-6">
               LET&apos;'S CUT TO THE CHASE. WHAT AM I GONNA LEARN?
-            </h2>
+            </h2></RevealOnScroll> <RevealOnScroll>
             <p className="text-sm sm:text-base md:text-lg text-neutral-300 max-w-2xl mb-10">
               Cut the BS short! Here&apos;s a no-nonsense look at the tools you
               are going to MASTER.
-            </p>
+            </p></RevealOnScroll>
             <BentoGridSecondDemo />
           </section>
 

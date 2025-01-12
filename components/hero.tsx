@@ -1,5 +1,6 @@
 import React from 'react';
 import { AuroraBackground } from './hero/Aurora';
+import RevealOnScroll from './Software/RevealOnScroll';
 
 const Hero = () => {
   return (
@@ -10,7 +11,7 @@ const Hero = () => {
       </div>
 
       {/* Centered Text */}
-      <div className="absolute z-10 text-center text-white px-6 sm:px-8 md:px-12">
+      <div className="absolute z-10 text-center text-white px-6 sm:px-8 md:px-12"><RevealOnScroll>
       <p className="mb-4 text-lg sm:text-xl animate-shimmer text-transparent bg-[linear-gradient(110deg,#ffffff,50%,rgba(255,255,255,0.5),100%,rgba(255,255,255,0.1))] bg-[length:300%_100%] bg-clip-text">
         Unlock Your Editing Potential</p>
 
@@ -37,7 +38,7 @@ const Hero = () => {
           >
             Join The Cult
           </a>
-        </div>
+        </div></RevealOnScroll>
       </div>
     </div>
   );
