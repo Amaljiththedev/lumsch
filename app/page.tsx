@@ -5,7 +5,7 @@ import { TracingBeamDemo } from "@/components/CaseStudy/tracingbeam.demo";
 import TwoColumnFooter from "@/components/Footer/Footer";
 import Hero from "@/components/hero";
 import Card from "@/components/price/card";
-// import { TimelineDemo } from "@/components/Roadmap.tsx/Timelinedemo";
+import { TimelineDemo } from "@/components/Roadmap.tsx/Timelinedemo";
 import { BentoGridSecondDemo } from "@/components/Software/bentogird";
 
 export default function Home() {
@@ -34,10 +34,10 @@ export default function Home() {
           <header className="w-full">
             <Hero />
           </header>
-{/* 
+
           <section className="flex-grow -mt-96 md:-mt-96 z-10 flex items-center justify-center w-full px-4 sm:px-6 md:px-10">
             <TimelineDemo />
-          </section>  */}
+          </section>  
 
           {/* Learning Tools Section */}
           <section className="flex-grow mt-40 flex flex-col items-center justify-center w-full px-4 sm:px-6 md:px-10 text-center">
