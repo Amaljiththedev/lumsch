@@ -105,17 +105,18 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
               <div className="relative overflow-hidden rounded-3xl w-3/4 mx-auto">
                 {/* Video */}
                 <video
-                ref={(el) => { videoRefs.current[index] = el }} // Correct way to assign ref
+                ref={(el) => { videoRefs.current[index] = el; }}
                 className="embla__video w-full h-full object-cover"
                 loop
-                muted // Initial mute setting
-                onTouchStart={(e) => e.preventDefault()} // Prevent fullscreen on touch
-                onClick={(e) => e.preventDefault()} // Prevent fullscreen on click
+                muted
+                playsInline // For modern browsers
+                webkit-playsinline="true" // For older iOS devices
+                onTouchStart={(e) => e.preventDefault()} // Prevent default touch behavior
+                onClick={(e) => e.preventDefault()} // Prevent default click behavior
                 >
-
-                  <source src={slide.videoSrc} type="video/mp4" />
-                  Your browser does not support the video tag.
-                </video>
+  <source src={slide.videoSrc} type="video/mp4" />
+  Your browser does not support the video tag.
+</video>
 
                 {/* Video Thumbnail Overlay */}
                 {showThumbnail[index] && (
