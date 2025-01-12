@@ -6,6 +6,7 @@ import FAQ from "@/components/FAQ/Faq";
 import TwoColumnFooter from "@/components/Footer/Footer";
 import Hero from "@/components/hero";
 import Card from "@/components/price/card";
+import { TimelineDemo } from "@/components/Roadmap.tsx/Timelinedemo";
 import { BentoGridSecondDemo } from "@/components/Software/bentogird";
 import StudentTestimonials from "@/components/Testimonals/Carsousel/base";
 import TestimonialSection from "@/components/Walloflove/Testimonials";
@@ -43,9 +44,9 @@ export default function Home() {
             <Hero />
           </header>
 
-          {/* <section className="flex-grow -mt-96 md:-mt-96 z-10 flex items-center justify-center w-full px-4 sm:px-6 md:px-10">
+          <section className="flex-grow -mt-96 md:-mt-96 z-10 flex items-center justify-center w-full px-4 sm:px-6 md:px-10">
             <TimelineDemo />
-          </section> */}
+          </section> 
 
           {/* Learning Tools Section */}
           <section className="flex-grow mt-40 flex flex-col items-center justify-center w-full px-4 sm:px-6 md:px-10 text-center">
@@ -71,11 +72,6 @@ export default function Home() {
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-light text-white mb-6">
               Case Study: Know Where the Demand Is
             </h2>
-            <p className="text-sm sm:text-base md:text-lg text-neutral-300 max-w-2xl mb-10">
-              Explore the real-world demand driving innovation. This case study
-              highlights key areas of growth, revealing where businesses are
-              seeking the most talent and solutions.
-            </p>
             <TracingBeamDemo />
           </section>
 

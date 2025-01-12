@@ -1,7 +1,7 @@
 import React, { useState, useRef } from 'react';
 import useEmblaCarousel from 'embla-carousel-react';
 import { EmblaOptionsType } from 'embla-carousel';
-import { IconPlayerPlayFilled, IconPlayerPause } from '@tabler/icons-react'; // Importing Tabler Icons
+import { IconPlayerPlayFilled, IconPlayerPause, IconCaretLeftFilled, IconCaretRightFilled } from '@tabler/icons-react'; // Importing Tabler Icons
 
 type PropType = {
   slides: { name: string; thumbnail: string; videoSrc: string }[]; // Each slide has a name, a thumbnail, and a video source
@@ -21,7 +21,7 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
 
   const handlePlayPause = (index: number) => {
     const video = videoRefs.current[index];
-  
+
     if (video) {
       // Check if any video is playing and mute all other videos
       videoRefs.current.forEach((otherVideo, otherIndex) => {
@@ -45,7 +45,7 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
           });
         }
       });
-  
+
       if (playing[index]) {
         video.pause(); // Pause the current video
         video.muted = true; // Mute it
@@ -74,7 +74,7 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
           return newShowName;
         });
       }
-  
+
       // Update the state for the current video's play/pause status
       setPlaying((prev) => {
         const newPlaying = [...prev];
@@ -83,6 +83,10 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
       });
     }
   };
+
+  // Handlers for previous and next buttons
+  const scrollPrev = () => emblaApi && emblaApi.scrollPrev();
+  const scrollNext = () => emblaApi && emblaApi.scrollNext();
 
   return (
     <section className="embla relative w-full max-w-screen-sm mx-auto">
@@ -101,11 +105,14 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
               <div className="relative overflow-hidden rounded-3xl w-3/4 mx-auto">
                 {/* Video */}
                 <video
-                  ref={(el) => { videoRefs.current[index] = el }} // Correct way to assign ref
-                  className="embla__video w-full h-full object-cover"
-                  loop
-                  muted // Initial mute setting
+                ref={(el) => { videoRefs.current[index] = el }} // Correct way to assign ref
+                className="embla__video w-full h-full object-cover"
+                loop
+                muted // Initial mute setting
+                onTouchStart={(e) => e.preventDefault()} // Prevent fullscreen on touch
+                onClick={(e) => e.preventDefault()} // Prevent fullscreen on click
                 >
+
                   <source src={slide.videoSrc} type="video/mp4" />
                   Your browser does not support the video tag.
                 </video>
@@ -144,11 +151,23 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
           ))}
         </div>
       </div>
+
+      {/* Navigation Buttons */}
+      <button
+  onClick={scrollPrev}
+  className="absolute left-4 top-1/2 transform -translate-y-1/2 p-2 bg-white text-black rounded-full shadow-lg z-20"
+>
+  <IconCaretLeftFilled fill="blue" />
+</button>
+<button
+  onClick={scrollNext}
+  className="absolute right-4 top-1/2 transform -translate-y-1/2 p-2 bg-white text-black rounded-full shadow-lg z-20"
+>
+<IconCaretRightFilled fill='blue'/>
+</button>
     </section>
   );
 };
-
-
 
 // Sample slides data
 const slides = [

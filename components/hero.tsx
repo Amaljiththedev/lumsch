@@ -11,15 +11,16 @@ const Hero = () => {
 
       {/* Centered Text */}
       <div className="absolute z-10 text-center text-white px-6 sm:px-8 md:px-12">
-        <p className="mb-4 text-lg sm:text-xl animate-shimmer text-transparent bg-[linear-gradient(110deg,#f0f0f1,45%,#5e6063,70%,#6b6d73)] bg-[length:200%_100%] bg-clip-text">
-          Unlock Your Editing Potential
-        </p>
+      <p className="mb-4 text-lg sm:text-xl animate-shimmer text-transparent bg-[linear-gradient(110deg,#ffffff,50%,rgba(255,255,255,0.5),100%,rgba(255,255,255,0.1))] bg-[length:300%_100%] bg-clip-text">
+        Unlock Your Editing Potential</p>
+
+
 
         <h1 className="text-6xl sm:text-7xl mb-6 font-medium">
-          Crafting Top-notch Video Editors
+              Crafting Exceptional Editors
         </h1>
 
-        <p className="text-lg sm:text-lg max-w-xl mx-auto">
+        <p className="text-base sm:text-base  mx-auto">
           Join us to enhance your editing skills with expert guidance and hands-on projects.
         </p>
 
