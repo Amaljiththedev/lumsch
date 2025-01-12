@@ -59,7 +59,7 @@ export default function Home() {
             <BentoGridSecondDemo />
           </section>
 
-          <section className="flex flex-col items-center justify-center text-center py-16 -mt-10 sm:mt-24 md:mt-28">
+          <section className="flex flex-col items-center justify-center text-center py-16 -mt-32 sm:mt-24 md:mt-28">
             <StudentTestimonials />
           </section>
           <section>

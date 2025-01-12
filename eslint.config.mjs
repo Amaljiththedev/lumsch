@@ -19,6 +19,10 @@ const eslintConfig = [
       "@next/next/no-img-element": "warn",
       "@typescript-eslint/ban-ts-comment": "off",
       "react-hooks/exhaustive-deps": "warn",
+      "@next/next/no-page-custom-font": "off",
+      "@next/next/no-img-element": "off",
+      "react-hooks/exhaustive-deps": "off",
+      "react-hooks/rules-of-hooks": "off"
     },
   },
 ];

@@ -85,7 +85,7 @@ export const Skeleton1 = () => {
         });
       },
     });
-  }, []);
+  }, [sequence]);
 
   return (
     <div className="p-8 overflow-hidden h-full relative flex items-center justify-center">

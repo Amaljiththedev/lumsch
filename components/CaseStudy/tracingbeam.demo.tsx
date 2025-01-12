@@ -5,6 +5,7 @@ import { TracingBeam } from "./tracing-beam";
 import { Component } from "./Graph";
 import { motion } from "framer-motion";
 import { IconVolume2, IconVolumeOff } from "@tabler/icons-react";
+import Image from "next/image";
 
 
 

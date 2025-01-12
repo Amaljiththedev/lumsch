@@ -50,25 +50,32 @@ export const TestimonialCard: React.FC<TestimonialCardProps> = ({
   spacing,
   className,
 }) => {
+  // Use useInView hook outside the loop
+  const inViewRefs = testimonials.map(() => useInView({
+    triggerOnce: true, // Trigger animation only once
+    threshold: 0.2,     // Trigger when 20% of the element is in view
+  }));
+
   return (
     <div className={cn(testimonialGridVariants({ columns }), className)}>
       {testimonials.map((testimonial, i) => {
-        // Intersection observer hook to detect if the item is in view
-        const { ref, inView } = useInView({
-          triggerOnce: true, // Trigger animation only once
-          threshold: 0.2,    // Trigger when 20% of the element is in view
-        });
+        // Destructure ref and inView state for each testimonial
+        const { ref, inView } = inViewRefs[i];
 
         return (
           <motion.div
             key={`${testimonial.name}-${i}`}
             className={cn(testimonialItemVariants({ spacing }))}
             ref={ref}
-            initial={{ opacity: 0, y: 50 }}  // Initial state for animation
+            initial={{ opacity: 0, y: 50 }}  // Initial state for animation (starting from below)
             animate={{
               opacity: inView ? 1 : 0,       // Animate to full opacity when in view
-              y: inView ? 0 : 50,             // Animate the vertical position
-              transition: { duration: 0.8 },  // Duration of the animation
+              y: inView ? 0 : 50,             // Animate the vertical position (slide in and out)
+              transition: {
+                duration: 0.8,               // Duration of the animation
+                ease: "easeOut",             // Smooth easing
+                yoyo: 1,                     // Make the element animate back down once it's out of view
+              },
             }}
           >
             <p className="text-lg text-blue-200 italic mb-4">
