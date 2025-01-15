@@ -4,7 +4,8 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { SparklesPreview } from "@/components/Loader";
-
+import head from "./head";
+import Head from "./head";
 // Import Geist fonts from Google Fonts
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -35,7 +36,7 @@ export default function RootLayout({
 
   return (
     <html lang="en">
-      <head>
+       <Head/>
         {/* Clash Display font from Fontshare */}
         <link
           href="https://api.fontshare.com/v2/css?f[]=clash-display@1&display=swap"
@@ -48,7 +49,7 @@ export default function RootLayout({
           rel="stylesheet"
           precedence="default"
         />
-      </head>
+    
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
         style={{ fontFamily: "'Clash Display', sans-serif" }} // Default font-family

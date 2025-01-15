@@ -67,7 +67,7 @@ const Hero = () => {
               className="absolute transition-all duration-1000 opacity-70 -inset-px bg-gradient-to-r from-[#3B82F6] via-[#2563EB] to-[#1D4ED8] rounded-xl blur-lg group-hover:opacity-100 group-hover:-inset-1 group-hover:duration-200 animate-tilt"
             ></div>
             <a
-              href="#"
+              href="https://api.whatsapp.com/send/?phone=918089660028&text&type=phone_number&app_absent=0"
               title="Get it now"
               className="relative inline-flex items-center animate-shimmer justify-center px-5 py-2 text-sm font-bold bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] text-white bg-gray-900 rounded-lg focus:outline-none focus:ring-2 focus:ring-offset-2border border-slate-800  bg-[length:200%_100%]  transition-colors  focus:ring-offset-2 focus:ring-offset-slate-50 focus:ring-gray-900"
               role="button"
