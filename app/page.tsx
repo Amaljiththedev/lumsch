@@ -97,35 +97,36 @@ export default function Home() {
             <div className="max-w-4xl mx-auto p-8 rounded-lg shadow-lg">
               <p className="text-3xl text-white mb-6 sm:text-4xl md:text-5xl font-light">
                 Join our cohort and master video editing with expert guidance.
-              </p>
-              <div className="flex justify-center">
+                </p>
+                <div className="flex justify-center">  
                 <Card title={"Transform Your Passion Into Profession"} price={"25000"} description={""} />
-              </div>
-              <p className="mt-8 text-lg text-gray-200 italic">
-                "The best way to predict the future is to create it." - Abraham Lincoln
-              </p>
+    </div>
+    <p className="mt-8 text-lg text-gray-200 italic">
+      "The best way to predict the future is to create it." - Abraham Lincoln
+    </p>
 
-              {/* Logos with Blue Gradient Background */}
-              <div className="mt-8 flex flex-col items-center bg-transparent p-4 rounded-lg">
-                <div className="text-center text-sm text-gray-200 mb-4">
-                  <p>Available Payment Methods</p>
-                  <p>EMI options available</p>
-                </div>
-                <div className="flex items-center space-x-4">
-                  <img 
-                    src="/rzr.png" 
-                    alt="Logo 1" 
-                    className="h-12 opacity-100"
-                  />
-                  <img 
-                    src="/bajaj.png" 
-                    alt="Logo 2" 
-                    className="h-12 opacity-100 bg-gradient-to-r"
-                  />
-                </div>
-              </div>
-            </div>
-          </section>
+    {/* Logos with Blue Gradient Background */}
+    <div className="mt-8 flex flex-col items-center bg-transparent p-4 rounded-lg">
+      <div className="text-center text-sm text-gray-200 mb-4">
+        <p>Available Payment Methods</p>
+        <p>EMI options available</p>
+      </div>
+      <div className="flex items-center space-x-4">
+        <img 
+          src="/rzr.png" 
+          alt="Razorpay Logo" 
+          className="h-8 sm:h-10 md:h-12 opacity-100"
+        />
+        <img 
+          src="/bajaj.png" 
+          alt="Bajaj Logo" 
+          className="h-8 sm:h-10 md:h-12 opacity-100"
+        />
+      </div>
+    </div>
+  </div>
+</section>
+
 
           <section>
             <FAQ />
