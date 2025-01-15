@@ -1,8 +1,8 @@
 // StudentTestimonials.tsx
 
 import React from 'react';
-import Accumulation from './Carsousel'; // Adjust the import path based on your folder structure
 import RevealOnScroll from '@/components/Software/RevealOnScroll';
+import Accumulation from './Carsousel';
 
 const StudentTestimonials: React.FC = () => {
   return (
@@ -12,10 +12,6 @@ const StudentTestimonials: React.FC = () => {
         HERE'S WHAT OUR STUDENTS HAVE TO SAY
       </h2></RevealOnScroll>
 
-      {/* Subtitle or Description */}
-      <RevealOnScroll><p className="text-lg sm:text-xl md:text-2xl text-white mb-12 max-w-4xl mx-auto">
-        Our students' experiences speak volumes about the value of our courses. Here's a glimpse into how we’ve helped them grow and achieve their goals.
-      </p></RevealOnScroll>
 
       {/* Testimonials Carousel */}
       <RevealOnScroll><Accumulation /></RevealOnScroll>

@@ -1,5 +1,6 @@
 "use client"
 
+import { useState, useEffect } from "react"; // Import useState and useEffect hooks
 import Navbar from "@/components/Appbar/Navbar";
 import { TracingBeamDemo } from "@/components/CaseStudy/tracingbeam.demo";
 import FAQ from "@/components/FAQ/Faq";
@@ -13,9 +14,20 @@ import StudentTestimonials from "@/components/Testimonals/Carsousel/base";
 import TestimonialSection from "@/components/Walloflove/Testimonials";
 
 export default function Home() {
+  const [isFooterVisible, setIsFooterVisible] = useState(false);
+
+  useEffect(() => {
+    // Set a timer to show the footer after 1 second
+    const timer = setTimeout(() => {
+      setIsFooterVisible(true);
+    }, 1000); // 1000 milliseconds = 1 second
+
+    return () => clearTimeout(timer); // Cleanup the timer when the component unmounts
+  }, []);
+
   return (
     <>
-      <div className="bg-gradient-to-r from-black via-black-800 to-black text-white animate-gradient bg-[length:200%_200%]">
+      <div className="bg-gradient-to-r from-black via-black to-blue-950 text-white animate-gradient bg-[length:200%_200%]">
         <style jsx global>{`
           @keyframes gradientAnimation {
             0% {
@@ -52,13 +64,16 @@ export default function Home() {
           {/* Learning Tools Section */}
           <section className="flex-grow mt-40 flex flex-col items-center justify-center w-full px-4 sm:px-6 md:px-10 text-center">
             <RevealOnScroll>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-light text-white mb-6">
-              LET&apos;'S CUT TO THE CHASE. WHAT AM I GONNA LEARN?
-            </h2></RevealOnScroll> <RevealOnScroll>
-            <p className="text-sm sm:text-base md:text-lg text-neutral-300 max-w-2xl mb-10">
-              Cut the BS short! Here&apos;s a no-nonsense look at the tools you
-              are going to MASTER.
-            </p></RevealOnScroll>
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-light text-white mb-6">
+                LET&apos;'S CUT TO THE CHASE. WHAT AM I GONNA LEARN?
+              </h2>
+            </RevealOnScroll>
+            <RevealOnScroll>
+              <p className="text-sm sm:text-base md:text-lg text-neutral-300 max-w-2xl mb-10">
+                Cut the BS short! Here&apos;s a no-nonsense look at the tools you
+                are going to MASTER.
+              </p>
+            </RevealOnScroll>
             <BentoGridSecondDemo />
           </section>
 
@@ -66,11 +81,11 @@ export default function Home() {
             <StudentTestimonials />
           </section>
           <section className="-mt-40">
-          <TestimonialSection/>
+            <TestimonialSection />
           </section>
 
           {/* Case Study Section */}
-          <section className="flex-grow mt-10 flex flex-col items-center justify-center w-full px-4 sm:px-6 md:px-10 bg-transparent text-center">
+          <section id="case-study" className="flex-grow mt-10 flex flex-col items-center justify-center w-full px-4 sm:px-6 md:px-10 bg-transparent text-center">
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-light text-white mb-6">
               Case Study: Know Where the Demand Is
             </h2>
@@ -87,18 +102,41 @@ export default function Home() {
                 <Card title={"Transform Your Passion Into Profession"} price={"25000"} description={""} />
               </div>
               <p className="mt-8 text-lg text-gray-200 italic">
-                "The best way to predict the future is to create it." - Abraham
-                Lincoln
+                "The best way to predict the future is to create it." - Abraham Lincoln
               </p>
+
+              {/* Logos with Blue Gradient Background */}
+              <div className="mt-8 flex flex-col items-center bg-transparent p-4 rounded-lg">
+                <div className="text-center text-sm text-gray-200 mb-4">
+                  <p>Available Payment Methods</p>
+                  <p>EMI options available</p>
+                </div>
+                <div className="flex items-center space-x-4">
+                  <img 
+                    src="/rzr.png" 
+                    alt="Logo 1" 
+                    className="h-12 opacity-100"
+                  />
+                  <img 
+                    src="/bajaj.png" 
+                    alt="Logo 2" 
+                    className="h-12 opacity-100 bg-gradient-to-r"
+                  />
+                </div>
+              </div>
             </div>
           </section>
+
           <section>
             <FAQ />
           </section>
+
           {/* Footer Section */}
-          <footer className="w-full py-6 text-center text-white flex justify-center items-center ">
-            <TwoColumnFooter />
-          </footer>
+          {isFooterVisible && (
+            <footer id='contact' className="w-full py-6 text-center text-white flex justify-center items-center">
+              <TwoColumnFooter />
+            </footer>
+          )}
         </main>
       </div>
     </>

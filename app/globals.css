@@ -222,3 +222,16 @@ body {
   stroke-dashoffset: 1000; /* Initially hidden */
   animation: pathAnimation 2s ease-out forwards; /* Animate with a duration */
 }
+
+/* Add this to your global CSS or a separate file for animations */
+
+.animate-on-load {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.animate {
+  opacity: 1;
+  transform: translateY(0);
+}

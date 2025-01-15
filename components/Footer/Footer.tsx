@@ -2,16 +2,11 @@ import Image from 'next/image'
 
 const navigation = {
   connect: [
-    { name: 'Book Meeting', href: '' },
-    { name: 'Twitter', href: 'https://twitter.com/justansub' },
-    { name: 'Github', href: 'https://www.youtube.com/@SpeedyBrand-SEO' },
-    { name: 'LinkedIn', href: 'https://www.linkedin.com/company/speedy-brand-inc/' },
-  ],
-  company: [
-    { name: 'Blogs', href: '/' },
-    { name: 'Pricing', href: '/' },
-    { name: 'Affiliate Partner', href: '/' },
-    { name: 'AI For Enterprise', href: '/' },
+    { name: 'Agency', href: 'https://luminarylines.com/' },
+    { name: 'Instagram', href: 'https://www.instagram.com/luminarylines/' },
+    { name: 'Youtube', href: 'https://youtube.com/@luminarylinesedit?si=usQQghoQZzX8z1tt' },
+    { name: 'LinkedIn', href: 'https://www.linkedin.com/in/luminarylines/' },
+    { name: 'Whatsapp', href: 'https://api.whatsapp.com/send/?phone=918089660028&text&type=phone_number&app_absent=0' },
   ],
 }
 
@@ -19,32 +14,28 @@ const TwoColumnFooter = () => {
   return (
     <footer
       aria-labelledby="footer-heading"
-      className="font-inter w-full bg-transparent relative"
+      className="font-inter w-full bg-transparent"
     >
       <h2 id="footer-heading" className="sr-only">
         Footer
       </h2>
-      <div className="absolute top-0 right-0 w-32 h-32 bg-no-repeat bg-contain" />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col lg:flex-row justify-between space-y-8 lg:space-y-0">
+        <div className="flex flex-col lg:flex-row justify-between items-center space-y-8 lg:space-y-0 lg:items-start">
           {/* Logo and Description */}
-          <div className="flex-shrink-0 space-y-4">
+          <div className="flex-shrink-0 text-center lg:text-left">
             <Image
               priority={true}
               width={100}
               height={40}
               src="/logo.png"
               alt="logo"
-              className="h-10 w-auto"
+              className="h-10 w-auto mx-auto lg:mx-0"
             />
-            <p className="text-sm leading-6 text-gray-300 max-w-xs">
-              Not your average Video Editing Cohort.
-            </p>
-            <p className="text-sm text-gray-300">Made with ❤️ by Ascension Wave.</p>
+            <p className="text-sm text-gray-300 mt-2">Made with ❤️ by Ascension Wave.</p>
           </div>
 
           {/* Navigation Links */}
-          <div className="grid grid-cols-2 gap-10 sm:grid-cols-2 lg:gap-16">
+          <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:gap-16">
             {/* Connect Section */}
             <div>
               <h3 className="text-sm font-semibold text-gray-200">Connect</h3>
@@ -55,23 +46,6 @@ const TwoColumnFooter = () => {
                       href={item.href}
                       target="_blank"
                       rel="noreferrer"
-                      className="text-sm text-white hover:text-gray-300"
-                    >
-                      {item.name}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            {/* Company Section */}
-            <div>
-              <h3 className="text-sm font-semibold text-gray-200">Company</h3>
-              <ul className="mt-4 space-y-2">
-                {navigation.company.map((item) => (
-                  <li key={item.name}>
-                    <a
-                      href={item.href}
                       className="text-sm text-white hover:text-gray-300"
                     >
                       {item.name}

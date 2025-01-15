@@ -82,9 +82,9 @@ export const TestimonialCard: React.FC<TestimonialCardProps> = ({
             <RevealOnScroll><p className="text-lg text-blue-200 italic mb-4">
               &ldquo;{testimonial.quote}&rdquo;
             </p></RevealOnScroll>
-            <RevealOnScroll><h3 className="text-base font-semibold text-gray-600">
+            <h3 className="text-base font-semibold text-white">
               - {testimonial.name}
-            </h3></RevealOnScroll>
+            </h3>
           </motion.div>
         );
       })}

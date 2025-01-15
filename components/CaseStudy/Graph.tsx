@@ -20,12 +20,12 @@ import {
 
 // Updated data with high demand but a much higher shortage (low supply)
 const chartData = [
-  { year: "2025", demand: 800, shortage: 500 },
-  { year: "2026", demand: 900, shortage: 600 },
-  { year: "2027", demand: 1000, shortage: 700 },
-  { year: "2028", demand: 1100, shortage: 850 },
-  { year: "2029", demand: 1200, shortage: 1000 },
-  { year: "2030", demand: 1300, shortage: 1200 },
+  { year: "2025", demand: 1200, shortage: 500 },
+  { year: "2026", demand: 1600, shortage: 600 },
+  { year: "2027", demand: 1700, shortage: 700 },
+  { year: "2028", demand: 1800, shortage: 850 },
+  { year: "2029", demand: 1900, shortage: 1000 },
+  { year: "2030", demand: 2000, shortage: 1200 },
 ]
 
 // Chart configuration with custom colors
@@ -50,7 +50,7 @@ export function Component() {
         </CardDescription>
       </CardHeader>
       <CardContent>
-        <ChartContainer config={chartConfig} style={{ height: "300px", width: "100%" }}>
+        <ChartContainer config={chartConfig} style={{ height: "250px", width: "100%" }}>
           <AreaChart
             accessibilityLayer
             data={chartData}

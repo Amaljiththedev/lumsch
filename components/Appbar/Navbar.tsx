@@ -33,10 +33,10 @@ const Navbar = () => {
               {[
                 { label: "Home", href: "/" },
                 { label: "About Us", href: "/about" },
-                { label: "Structure", href: "/structure" },
+                { label: "Case Study", href: "#case-study" },
                 { label: "Agency", href: "https://luminarylines.com/" },
-                { label: "Hire from Us", href: "/hire-from-us" },
-                { label: "Contact Us", href: "/contact" },
+                { label: "Hire from Us", href: "https://docs.google.com/forms/d/e/1FAIpQLSfUx88o8LYaljItgubB19KgMEZW6l3MeAhkOgyheF3_M7O3MA/viewform" },
+                { label: "Contact Us", href: "#contact" },
               ].map((item, index) => (
                 <Link
                   key={index}
@@ -105,10 +105,10 @@ const Navbar = () => {
                 {[
                   { label: "Home", href: "/" },
                   { label: "About Us", href: "/about" },
-                  { label: "Structure", href: "/structure" },
+                  { label: "Case Study", href: "#case-study" },
                   { label: "Agency", href: "https://luminarylines.com/" },
-                  { label: "Hire from Us", href: "/hire-from-us" },
-                  { label: "Contact Us", href: "/contact" },
+                  { label: "Hire from Us", href: "https://docs.google.com/forms/d/e/1FAIpQLSfUx88o8LYaljItgubB19KgMEZW6l3MeAhkOgyheF3_M7O3MA/viewform?usp=header" },
+                  { label: "Contact Us", href: "#contact" },
                 ].map((item, index) => (
                   <Link
                     key={index}

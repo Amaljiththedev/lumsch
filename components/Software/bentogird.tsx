@@ -30,7 +30,7 @@ const items = [
     description: "Develop the essential skills and strategies to excel as a freelancer or lead a successful agency. Learn how to manage clients, deliver high-quality work, and grow your business in a competitive market.",
     header: (
       <DotLottieReact
-        src="https://lottie.host/258b2181-4253-4664-be82-2ae9fad6e37c/YUd2s5H67o.lottie"
+        src="/YUd2s5H67o.lottie"
         loop
         autoplay
       />
