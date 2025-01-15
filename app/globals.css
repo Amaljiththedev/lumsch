@@ -235,3 +235,8 @@ body {
   opacity: 1;
   transform: translateY(0);
 }
+
+:root {
+  --background: black; /* Always black background */
+  --foreground: white; /* Always white text */
+}

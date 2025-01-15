@@ -1,5 +1,5 @@
 // API.js
-const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:1337/api';
+const API_URL = process.env.NEXT_PUBLIC_API_URL || 'https://lumschbackend.onrender.com/api';
 
 export const API = {
   HERO: `${API_URL}/hero`, // Endpoint for the Hero section
