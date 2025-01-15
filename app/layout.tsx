@@ -28,7 +28,7 @@ export default function RootLayout({
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsLoading(false);
-    }, 3000); // Set 5-second delay
+    }, 5000); // Set 5-second delay
 
     return () => clearTimeout(timer); // Cleanup timeout on unmount
   }, []);
