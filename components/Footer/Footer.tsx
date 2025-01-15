@@ -4,9 +4,9 @@ const navigation = {
   connect: [
     { name: 'Agency', href: 'https://luminarylines.com/' },
     { name: 'Instagram', href: 'https://www.instagram.com/luminarylines/' },
-    { name: 'Youtube', href: 'https://youtube.com/@luminarylinesedit?si=usQQghoQZzX8z1tt' },
+    { name: 'YouTube', href: 'https://youtube.com/@luminarylinesedit?si=usQQghoQZzX8z1tt' },
     { name: 'LinkedIn', href: 'https://www.linkedin.com/in/luminarylines/' },
-    { name: 'Whatsapp', href: 'https://api.whatsapp.com/send/?phone=918089660028&text&type=phone_number&app_absent=0' },
+    { name: 'WhatsApp', href: 'https://api.whatsapp.com/send/?phone=918089660028&text&type=phone_number&app_absent=0' },
   ],
 }
 
@@ -14,21 +14,21 @@ const TwoColumnFooter = () => {
   return (
     <footer
       aria-labelledby="footer-heading"
-      className="font-inter w-full bg-transparent"
+      className="font-inter w-full bg-transparent text-white"
     >
-      <div className="max-w-9xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col mb-10 lg:flex-row justify-between items-center space-y-8 lg:space-y-0 lg:items-start">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex flex-col lg:flex-row justify-between items-center space-y-8 lg:space-y-0 lg:items-start">
           {/* Logo and Description */}
-          <div className="flex-shrink-0 text-center lg:text-left ">
+          <div className="flex-shrink-0 text-center lg:text-left">
             <Image
               priority={true}
-              width={100}
-              height={40}
+              width={50}
+              height={50}
               src="/logo.svg"
               alt="logo"
-              className="h-10 w-auto mx-auto lg:mx-0"
+              className="h-auto w-auto mx-auto lg:mx-0"
             />
-            <p className="text-sm text-gray-300 mt-10">
+            <p className="text-sm text-gray-300 mt-4">
               Made with ❤️ by{' '}
               <a
                 href="https://www.ascensionwave.in/"
@@ -43,7 +43,7 @@ const TwoColumnFooter = () => {
           </div>
 
           {/* Navigation Links */}
-          <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:gap-16">
+          <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:gap-16 lg:grid-cols-1">
             {/* Connect Section */}
             <div>
               <h3 className="text-sm font-semibold text-gray-200">Connect</h3>

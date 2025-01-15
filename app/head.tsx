@@ -3,7 +3,7 @@
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Luminary Lines Editing School - Master the Art of Editing",
+  title: "Luminary Lines|school",
   description: "Join Luminary Lines Editing School's cohort program to become a professional editor and transition into a freelance career or agency ownership.",
 };
 
