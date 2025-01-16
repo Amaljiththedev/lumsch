@@ -2,7 +2,7 @@
 import { IconVolume2, IconVolumeOff } from "@tabler/icons-react";
 import { useEffect, useRef, useState } from "react";
 
-const API_URL = process.env.NEXT_PUBLIC_API_URL || "https://lumschbackend.onrender.com/";
+const API_URL = process.env.NEXT_PUBLIC_API_URL || "https://luminarylinesadmin.in";
 
 export const VideoComponent3 = () => {
   const [isMuted, setIsMuted] = useState(true);
