@@ -23,7 +23,7 @@ const Navbar = () => {
                   alt="Logo"
                   width={30}
                   height={30}
-                  className="rounded-md"
+                  className=""
                 />
               </Link>
             </div>
