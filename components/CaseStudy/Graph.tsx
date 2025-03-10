@@ -105,11 +105,11 @@ export function Component() {
           <div className="flex gap-4 text-sm">
             <div className="flex items-center gap-1">
               <span className="w-4 h-4 bg-red-500 rounded-full"></span>
-              <span>Demand</span>
+              <span>Shortage</span>
             </div>
             <div className="flex items-center gap-1">
               <span className="w-4 h-4 bg-blue-500 rounded-full"></span>
-              <span>Shortage</span>
+              <span>Demand</span>
             </div>
           </div>
         </div>
