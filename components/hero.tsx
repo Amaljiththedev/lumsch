@@ -1,6 +1,6 @@
 "use client"
 import React, { useEffect, useState } from 'react';
-import { API } from '@/config/apiCofig'; // Import the API object
+import { API } from '@/config/apiCofig';
 import { AuroraBackground } from './hero/Aurora';
 import RevealOnScroll from './Software/RevealOnScroll';
 
@@ -49,16 +49,16 @@ const Hero = () => {
       {/* Centered Text */}
       <div className="absolute z-10 text-center text-white px-6 sm:px-8 md:px-12">
         <RevealOnScroll>
-          <p className="mb-4 text-lg sm:text-xl  text-transparent bg-[linear-gradient(110deg,#ffffff,50%,rgba(255,255,255,0.5),100%,rgba(255,255,255,0.1))] bg-[length:300%_100%] bg-clip-text">
-            {heroData.subheading}  {/* Dynamic Subheading */}
+        <p className="mb-4 text-base sm:text-lg md:text-xl lg:text-2xl text-transparent bg-[linear-gradient(110deg,#ffffff,50%,rgba(255,255,255,0.5),100%,rgba(255,255,255,0.1))] bg-[length:300%_100%] bg-clip-text">
+            {heroData.subheading}
           </p>
 
-          <h1 className="text-6xl sm:text-7xl mb-6 font-medium">
-            {heroData.Title}  {/* Dynamic Title */}
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl mb-6 font-medium">
+            {heroData.Title}
           </h1>
 
-          <p className="text-base sm:text-base mx-auto">
-            {heroData.description}  {/* Dynamic Description */}
+          <p className="text-sm sm:text-base md:text-lg lg:text-xl mx-auto">
+            {heroData.description}
           </p>
 
           {/* Button with Blue Gradient */}
