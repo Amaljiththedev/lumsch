@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import axios from "axios";
 import { IconVolume2, IconVolumeOff } from "@tabler/icons-react";
 
-const API_URL = process.env.NEXT_PUBLIC_API_URL || "https://luminarylinesadmin.in";
+const API_URL = process.env.NEXT_PUBLIC_API_URL || "https://luminarylinesadmin.in/";
 
 // Video Component
 const TimelineVideo1 = () => {
