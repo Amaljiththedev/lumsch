@@ -14,7 +14,7 @@ const TimelineVideo2 = () => {
   useEffect(() => {
     const fetchVideoData = async () => {
       try {
-        const response = await axios.get(`${API_URL}/api/time-line-data2s`); // Replace API_URL with your actual API base URL
+        const response = await axios.get(`${API_URL}api/time-line-data2s`); // Replace API_URL with your actual API base URL
         console.log("API Response:", response.data); // Debugging API response
         const videoData = response.data.data[0];
         if (videoData && videoData.videosrc) {

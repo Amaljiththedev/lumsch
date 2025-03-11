@@ -13,7 +13,7 @@ const TimelineVideo1 = () => {
   useEffect(() => {
     const fetchVideoData = async () => {
       try {
-        const response = await axios.get(`${API_URL}/api/time-line-data1s`);
+        const response = await axios.get(`${API_URL}api/time-line-data1s`);
         const videoData = response.data.data[0];
         setVideoSrc(videoData.videosrc); // Set video source
       } catch (error) {
