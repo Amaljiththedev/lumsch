@@ -63,7 +63,7 @@ const TitleSection = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get(`${API_URL}/api/time-line-data1s`);
+        const response = await axios.get(`${API_URL}api/time-line-data1s`);
         const titleData = response.data.data[0];
         setTitle(titleData.title); // Set title
       } catch (error) {
@@ -83,7 +83,7 @@ const SubheadingSection = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get(`${API_URL}/api/time-line-data1s`);
+        const response = await axios.get(`${API_URL}api/time-line-data1s`);
         const subheadingData = response.data.data[0];
         setSubheading(subheadingData.subheading); // Set subheading
       } catch (error) {
@@ -103,7 +103,7 @@ const ListSection1 = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get(`${API_URL}/api/time-line-data1s`);
+        const response = await axios.get(`${API_URL}api/time-line-data1s`);
         const list1Data = response.data.data[0];
         setList1(list1Data.list1); // Set list1
       } catch (error) {
@@ -126,7 +126,7 @@ const ListSection2 = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get(`${API_URL}/api/time-line-data1s`);
+        const response = await axios.get(`${API_URL}api/time-line-data1s`);
         const list2Data = response.data.data[0];
         setList2(list2Data.list2); // Set list2
       } catch (error) {
@@ -148,7 +148,7 @@ const ListSection3 = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get(`${API_URL}/api/time-line-data1s`);
+        const response = await axios.get(`${API_URL}api/time-line-data1s`);
         const list3Data = response.data.data[0];
         setList3(list3Data.list3); // Set list3
       } catch (error) {
@@ -170,7 +170,7 @@ const Description = () => {
     useEffect(() => {
       const fetchData = async () => {
         try {
-          const response = await axios.get(`${API_URL}/api/time-line-data1s`);
+          const response = await axios.get(`${API_URL}api/time-line-data1s`);
           const descriptionData = response.data.data[0];
           setDescription(descriptionData.description); // Set description
         } catch (error) {
