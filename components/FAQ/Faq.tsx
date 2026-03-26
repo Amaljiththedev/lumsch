@@ -18,7 +18,35 @@ interface FAQItem {
 }
 
 const FAQ = () => {
-  const [faqs, setFaqs] = useState<FAQItem[]>([]);
+  const defaultFaqs: FAQItem[] = [
+    {
+      id: 1,
+      question: "Who is this course for?",
+      answer: "This course is specifically designed for freelance video editors who want to elevate their skills, attract higher-paying clients, and position themselves as premium editors in the market."
+    },
+    {
+      id: 2,
+      question: "Do I need prior video editing experience?",
+      answer: "While beginners can benefit from the foundational modules, having a basic understanding of video editing software (like Premiere Pro, DaVinci Resolve, or Final Cut) will help you get the most out of the advanced techniques and business positioning strategies."
+    },
+    {
+      id: 3,
+      question: "How will this help me get more freelance clients?",
+      answer: "We go beyond just editing techniques. The in-depth modules cover personal branding, portfolio creation, cold outreach, and how to effectively pitch your services to high-ticket clients to stand out from the competition."
+    },
+    {
+      id: 4,
+      question: "What software is covered in the course?",
+      answer: "The editing principles and business strategies taught are software-agnostic, but we primarily demonstrate advanced workflows using Adobe Premiere Pro, After Effects, and DaVinci Resolve."
+    },
+    {
+      id: 5,
+      question: "Do I get access to a community?",
+      answer: "Yes! You'll get lifetime access to our exclusive community of freelance video editors where you can get feedback on your edits, share client wins, and network with other ambitious creatives."
+    }
+  ];
+
+  const [faqs, setFaqs] = useState<FAQItem[]>(defaultFaqs);
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   const toggleAccordion = (index: number) => {
@@ -35,12 +63,13 @@ const FAQ = () => {
 
         // Type the item as FAQAPIItem here
         const formattedFAQs = data.data?.map((item: FAQAPIItem, idx: number) => ({
-          id: idx,
+          id: defaultFaqs.length + idx + 1,
           question: item.Question || "No question available",
           answer: item.Answer || "No answer available",
         })) || [];
 
-        setFaqs(formattedFAQs);
+        // Append fetched FAQs to the default ones
+        setFaqs([...defaultFaqs, ...formattedFAQs]);
       } catch (error) {
         console.error("Error fetching FAQs:", error);
       }

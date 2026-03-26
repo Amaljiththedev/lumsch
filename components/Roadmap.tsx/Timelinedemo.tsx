@@ -3,7 +3,7 @@ import React from "react";
 import { Timeline } from "./Timeline";
 import { 
   Description, ListSection1, ListSection2, ListSection3, 
-  SubheadingSection, TimelineVideo1, TitleSection 
+ TimelineVideo1, TitleSection 
 } from "./step1";
 import { 
   Description2, ListSection21, ListSection22, ListSection23, 
@@ -47,7 +47,6 @@ export function TimelineDemo() {
             <ListSection3 />
           </ul>
           <div className="text-white text-xs md:text-sm font-normal mb-8">
-            <SubheadingSection />
           </div>
           <div className="grid gap-4">
             <TimelineVideo1 />

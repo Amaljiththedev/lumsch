@@ -2,7 +2,6 @@ import React, { useState, useRef, useEffect } from 'react';
 import useEmblaCarousel from 'embla-carousel-react';
 import { EmblaOptionsType } from 'embla-carousel';
 import { IconPlayerPlayFilled, IconPlayerPause, IconCaretLeftFilled, IconCaretRightFilled } from '@tabler/icons-react'; // Importing Tabler Icons
-import { API } from '@/config/apiCofig'; // Import API config
 import { motion } from 'framer-motion'; // Import Framer Motion
 
 type PropType = {
@@ -22,25 +21,37 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
   const [isAnimating, setIsAnimating] = useState(true);
 
   useEffect(() => {
-    const fetchSlides = async () => {
-      try {
-        const response = await fetch(`${API.CAROUSEL_SLIDES}`);
-        const data = await response.json();
-
-        // Extract the slides data from the response object
-        const slidesData = data.data || []; // Safely access the 'data' field
-
-        console.log('Fetched slides:', slidesData);
-        setSlides(slidesData);
-        setPlaying(new Array(slidesData.length).fill(false));
-        setShowThumbnail(new Array(slidesData.length).fill(true));
-        setShowName(new Array(slidesData.length).fill(true));
-      } catch (error) {
-        console.error('Error fetching carousel slides:', error);
+    const slidesData = [
+      {
+        name: 'Video 1',
+        thumbnail: 'https://vlzqrxxsielfcuq7.public.blob.vercel-storage.com/m-f3rSo7G273IsNz24bfp3FxkvBNAwrJ.jpg',
+        videoSrc: 'https://vlzqrxxsielfcuq7.public.blob.vercel-storage.com/AQMcnqzRO1YO6fMbZl1iJGZ2s6f2gsaoOSUATmruDQrnuCHf1ayK9SpcfSSbo-ogQWZDcSsxZQJPTuh-aVzNaI43rp3ipBpoVRWxgx4.mp4'
+      },
+      {
+        name: 'Video 2',
+        thumbnail: 'https://vlzqrxxsielfcuq7.public.blob.vercel-storage.com/m-f3rSo7G273IsNz24bfp3FxkvBNAwrJ.jpg',
+        videoSrc: 'https://vlzqrxxsielfcuq7.public.blob.vercel-storage.com/AQMgl81LzpXtmUixUnp1-3IYe2esYM8znPh_l6fDBagJ0ZHKafqo165SA-YAPIqP1DT-n3u5brIiW7IWDv-sxDIT.mp4'
+      },
+      {
+        name: 'Video 3',
+        thumbnail: 'https://vlzqrxxsielfcuq7.public.blob.vercel-storage.com/m-f3rSo7G273IsNz24bfp3FxkvBNAwrJ.jpg',
+        videoSrc: 'https://vlzqrxxsielfcuq7.public.blob.vercel-storage.com/AQOvOZNF2l7UeEeyPbZbsMLpoZATT1VQqMGtBvWEJCKiMpQnbutIOUhhg0cSVd1BF5swEoSsM_oLNr9SRcZPnDAfqVmQ4S7fusNbXUw.mp4'
+      },
+      {
+        name: 'Video 4',
+        thumbnail: 'https://vlzqrxxsielfcuq7.public.blob.vercel-storage.com/m-f3rSo7G273IsNz24bfp3FxkvBNAwrJ.jpg',
+        videoSrc: 'https://vlzqrxxsielfcuq7.public.blob.vercel-storage.com/AQPPCrsihlLN77pDvSCa5xomnM_jFmKgnW8qBibBdCQkVnnkNxz2WJO_GWyzTSCOHO44ezGp2z9zEUR4G9IAuA9I.mp4'
+      },
+      {
+        name: 'Video 5',
+        thumbnail: 'https://vlzqrxxsielfcuq7.public.blob.vercel-storage.com/m-f3rSo7G273IsNz24bfp3FxkvBNAwrJ.jpg',
+        videoSrc: 'https://vlzqrxxsielfcuq7.public.blob.vercel-storage.com/video-MeLGPtndSs3ERyb0MCTTKHO64jBXMq.mp4'
       }
-    };
-
-    fetchSlides();
+    ];
+    setSlides(slidesData);
+    setPlaying(new Array(slidesData.length).fill(false));
+    setShowThumbnail(new Array(slidesData.length).fill(true));
+    setShowName(new Array(slidesData.length).fill(true));
   }, []);
 
   const handlePlayPause = (index: number) => {

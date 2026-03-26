@@ -6,38 +6,8 @@ const API_URL = process.env.NEXT_PUBLIC_API_URL || "https://luminarylinesadmin.i
 
 export const VideoComponent3 = () => {
   const [isMuted, setIsMuted] = useState(true);
-  const [videoSrc, setVideoSrc] = useState<string | null>(null);
+  const videoSrc = "https://vlzqrxxsielfcuq7.public.blob.vercel-storage.com/video.mp4";
   const videoRef = useRef<HTMLVideoElement | null>(null);
-
-  // Fetch video data from API
-  useEffect(() => {
-    const fetchVideo = async () => {
-      try {
-        const apiUrl = `${API_URL}/api/tracing-beam-video3s`;
-        console.log("Fetching from:", apiUrl); // Debug: Check API URL
-
-        const response = await fetch(apiUrl);
-        console.log("Raw Response:", response); // Debug: Check response object
-
-        if (!response.ok) {
-          throw new Error(`HTTP error! Status: ${response.status}`);
-        }
-
-        const data = await response.json();
-        console.log("Parsed Data:", data); // Debug: Check the parsed response JSON
-
-        // Corrected extraction of video URL
-        const videoUrl = data?.data?.[0]?.videosrc || null;
-        console.log("Extracted Video URL:", videoUrl); // Debug: Check extracted video URL
-
-        setVideoSrc(videoUrl);
-      } catch (error) {
-        console.error("Error fetching video:", error);
-      }
-    };
-
-    fetchVideo();
-  }, []);
 
   const handleMuteToggle = () => {
     if (videoRef.current) {
@@ -46,10 +16,6 @@ export const VideoComponent3 = () => {
     }
     setIsMuted((prev) => !prev);
   };
-
-  if (!videoSrc) {
-    return <p>Loading video...</p>;
-  }
 
   return (
     <div className="relative flex justify-center items-center w-full h-auto">
