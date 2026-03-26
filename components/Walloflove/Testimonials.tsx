@@ -34,7 +34,7 @@ const TestimonialSection = () => {
         const data = await res.json();
         
         if (data.data && Array.isArray(data.data)) {
-          const apiTestimonials = data.data.map((t: any, index: number) => ({
+          const apiTestimonials = data.data.map((t: Omit<Testimonial, 'id'>, index: number) => ({
             ...t,
             id: defaultTestimonials.length + index + 1
           }));
